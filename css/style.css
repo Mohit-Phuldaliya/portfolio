@@ -63,10 +63,14 @@ html {
   font-size: 62.5%;
   /* background-color: var(--navy); */
   background-color: #020c1b;
+  overflow-x: hidden;
   /* background-image: url(/images/back1.jpg);
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat; */
+}
+body {
+  overflow: hidden;
 }
 
 h1,
@@ -271,6 +275,7 @@ Hero Section Start
   justify-content: center;
 }
 .section-hero-data img {
+  margin: 3rem 0 5rem 0;
   border-radius: 50%;
   border: solid var(--lightest-slate);
   border-width: 0.4rem;
@@ -824,8 +829,34 @@ Footer Section Start
 /********************
 Media Queries
 *********************/
+@media (max-width: 95em) {
+  .container {
+    max-width: 130rem;
+    padding: 0 3.2rem;
+  }
+
+  .navbar-lists {
+    gap: 3.4rem;
+  }
+}
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+  .container {
+    max-width: 110rem;
+  }
+  .grid {
+    gap: 4.8rem;
+  }
+}
 
 @media (max-width: 980px) {
+  html {
+    font-size: 50%;
+  }
+
   .header {
     position: relative;
   }
@@ -836,6 +867,14 @@ Media Queries
     /* border: 3px solid var(--black); */
   }
 
+  /* .mobile-nav-icon {
+    width: 5rem;
+    height: 5rem;
+    color: var(--black);
+  } */
+  /* .header .navpic {
+    width: 40%;
+  } */
   .navbar {
     width: 100%;
     height: 100vh;
@@ -878,5 +917,72 @@ Media Queries
 
   .active .mobile-navbar-btn .close-outline {
     display: block;
+  }
+
+  /* hero section */
+
+  .section-hero {
+    line-height: 1.05;
+  }
+  .section-hero-data {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    /* gap: 2rem; */
+  }
+  .section-hero-data img {
+    margin: 4rem 0 5rem 0;
+  }
+  .section-hero-data .hero-para {
+    padding: 4rem 0 5rem 0;
+  }
+
+  /* services section */
+  .section-services .grid {
+    gap: 6rem;
+  }
+  .grid-three-column {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* below 750px */
+@media (max-width: 47em) {
+  .section-services .container .leftside {
+    display: none;
+  }
+  .section-hero-data {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    /* gap: 2rem; */
+  }
+  .section-hero-data img {
+    margin: 3rem 0 5rem 0;
+  }
+  .section-hero-data .hero-para {
+    padding: 4rem 0 5rem 0;
+  }
+  .section-portfoilio .grid-three-column {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .container {
+    max-width: 71rem;
+  }
+  .grid-two-column {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .section-contact-outer {
+    display: flex;
+    flex-direction: column;
+    /* gap: 10rem; */
+  }
+  .section-contact-outer .section-contact-main {
+    margin: 0;
+  }
+  .section-hero .hero-heading {
+    margin: 1rem 0 2rem 0;
+    font-weight: 700;
+    font-size: 5.4rem;
+    /* font-family: cursive; */
+    font-family: var(--font-mono);
   }
 }
