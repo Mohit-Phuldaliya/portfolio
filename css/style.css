@@ -986,3 +986,37 @@ Media Queries
     font-family: var(--font-mono);
   }
 }
+@media (max-width: 42em) {
+  .section-work-data .grid-four-column {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-three-column {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .section-hero .hero-heading {
+    margin: 1rem 0 2rem 0;
+    font-weight: 700;
+    font-size: 3.3rem;
+    /* font-family: cursive; */
+    font-family: var(--font-mono);
+  }
+  .p-btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* justify-content: center; */
+    /* align-items: center; */
+    gap: 5rem;
+    margin: 5rem;
+  }
+}
+@media (max-width: 30em) {
+  .grid-three-column {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .bio-data-stats {
+    display: flex;
+    padding: 1rem 0 5rem 0;
+    flex-direction: column;
+    gap: 0;
+  }
+}
