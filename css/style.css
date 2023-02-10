@@ -105,13 +105,18 @@ li {
 Header Section Start
 *********************/
 .header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   padding: 0 4.8rem;
   height: 8rem;
   background-color: rgba(10, 25, 47, 0.85);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 10000;
 }
+
 .header .navpic {
   border-radius: 50%;
   height: 7rem;
@@ -261,6 +266,7 @@ Reusable code Section
 Hero Section Start
 *********************/
 .section-hero {
+  margin: 9rem 0 0 0;
   position: relative;
   transition: all 0.7s linear;
   text-align: center;
@@ -354,7 +360,7 @@ About Section Start
 }
 
 .b1 {
-  font-size: 18px;
+  font-size: 1.9rem;
   padding: 1rem;
 }
 
@@ -747,6 +753,7 @@ Footer Section Start
 .section-footer {
   /* padding: 9rem 0; */
   /* background: var(--footer); */
+  height: 20rem;
   background-color: rgba(10, 25, 47, 0.85);
   transition: all 0.7s linear;
 }
@@ -795,8 +802,8 @@ Footer Section Start
 
 .scrollTop-style {
   position: fixed;
-  right: 2%;
-  bottom: 4%;
+  right: 3%;
+  bottom: 9%;
   z-index: 1;
 }
 .scroll-top {
@@ -826,6 +833,9 @@ Footer Section Start
   height: 200px;
 }
 
+.socialnavdown {
+  display: none;
+}
 /********************
 Media Queries
 *********************/
@@ -858,7 +868,9 @@ Media Queries
   }
 
   .header {
-    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
 
   .mobile-navbar-btn {
@@ -1003,20 +1015,27 @@ Media Queries
   .p-btns {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* justify-content: center; */
-    /* align-items: center; */
     gap: 5rem;
     margin: 5rem;
+  }
+  .unique {
+    display: none;
+  }
+  .socialnavdown {
+    display: flex;
+    padding: 0 4.8rem;
+    width: 100%;
+    height: 8rem;
+    background-color: rgba(10, 25, 47, 0.85);
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    position: fixed;
+    bottom: 0%;
   }
 }
 @media (max-width: 30em) {
   .grid-three-column {
     grid-template-columns: repeat(1, 1fr);
-  }
-  .bio-data-stats {
-    display: flex;
-    padding: 1rem 0 5rem 0;
-    flex-direction: column;
-    gap: 0;
   }
 }
