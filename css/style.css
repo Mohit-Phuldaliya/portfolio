@@ -934,7 +934,9 @@ Media Queries
     z-index: 9999;
     /* border: 3px solid var(--black); */
   }
-
+  .cursor {
+    display: none;
+  }
   /* .mobile-nav-icon {
     width: 5rem;
     height: 5rem;
