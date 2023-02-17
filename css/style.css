@@ -391,7 +391,7 @@ About Section Start
 .bio-image img {
   /* box-shadow: -2rem -2rem 0 0 var(--helper); */
   border-radius: 4px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
   height: 50rem;
   width: 40rem;
 }
